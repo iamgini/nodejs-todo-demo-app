@@ -164,7 +164,7 @@ def callAT(){
 
      ansibleTower(
             towerServer: 'AAP-Demo',
-            templateType: 'jobtemplate',
+            templateType: 'job',
             jobTemplate: 'List to String',
             importTowerLogs: true,
             inventory: 'Demo Inventory',
