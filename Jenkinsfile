@@ -9,9 +9,9 @@ pipeline {
     //    maven "maven-3"
     //}
 
-    //environment {
-    //    // Git Repo
-    //    GIT_URL = "http://gitlab.domain.com/eanylin/quarkus-test.git"
+    environment {
+        // Git Repo
+        GIT_URL = "https://github.com/ginigangadharan/nodejs-todo-demo-app"
     //    
     //    // This can be nexus3 or nexus2
     //    NEXUS_VERSION = "nexus3"
@@ -27,9 +27,15 @@ pipeline {
 //
     //    // Jenkins credential id to authenticate to Nexus OSS
     //    NEXUS_CREDENTIAL_ID = "nexus-credentials"
-    //}
+    }
 
     stages {
+        stage ('Git Checkout') {
+          steps {
+              git branch: 'main', url: GIT_URL
+            }
+        }
+      
         stage("Build") {
             steps {
                 script {
