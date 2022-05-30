@@ -134,14 +134,14 @@ pipeline {
         //    }
         //}
         
-        stage("Approval") {
-            steps {
-                script {
-                    // Deploy to Production?
-                    input "Deploy?"
-                }
-            }
-        }
+        //stage("Approval") {
+        //    steps {
+        //        script {
+        //            // Deploy to Production?
+        //            input "Deploy?"
+        //        }
+        //    }
+        //}
 
         stage("Deploy") {
             steps {
@@ -163,7 +163,7 @@ def deploy(String appname, String env) {
 def callAT(){
 
      ansibleTower(
-            towerServer: '192.168.1.103',
+            towerServer: 'AAP-Demo',
             templateType: 'jobtemplate',
             jobTemplate: 'List to String',
             importTowerLogs: true,
