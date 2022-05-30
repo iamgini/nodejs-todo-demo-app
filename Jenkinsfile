@@ -32,7 +32,7 @@ pipeline {
     stages {
         stage ('Git Checkout') {
           steps {
-              git branch: 'main', url: GIT_URL
+              git branch: 'main', url: 'https://github.com/ginigangadharan/nodejs-todo-demo-app.git'
             }
         }
       
