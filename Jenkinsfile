@@ -63,18 +63,11 @@ pipeline {
     }
 }
 
-//def deploy(String appname, String env) {
-//    echo "Triggering Ansible Tower"
-//
-//    //callAT();
-//}
-
 def ansible_controller_job(){
 
      ansibleTower(
             towerServer: 'AAP-Demo',
             templateType: 'job',
-            //jobTemplate: 'List to String',
             jobTemplate: 'PostgreSQL - Create Database and User Access',
             importTowerLogs: true,
             inventory: 'Ansible Dev Lab',
@@ -93,13 +86,6 @@ def ansible_controller_job(){
             postgres_table: "$POSTGRES_TABLE"
             postgres_new_user_name: "$POSTGRES_NEW_USER_NAME"
             postgres_new_user_password: "$POSTGRES_NEW_USER_PASSWORD"
-            maven_repository_url: "http://nexus.domain.com:8081/repository/maven-releases/"
-            app_group_id: "com.redhat.app"
-            app_artifact_id: "hello"
-            artifact_extension_type: "jar"
-            app_version: "1.0"
-            app_folder: "/opt/app"
-            web_app_url: "http://app-server1:9080/hello"
             '''
         )
 }
