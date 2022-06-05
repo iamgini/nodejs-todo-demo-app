@@ -35,13 +35,13 @@ pipeline {
             }
         }
 
-        //stage("Integration Test") {
-        //    steps {
-        //        script {
-        //            echo "Integration Test"
-        //        }
-        //    }
-        //}
+        stage("Integration Test") {
+            steps {
+                script {
+                    echo "Integration Test"
+                }
+            }
+        }
 
         stage("Creating Database") {
             steps {
