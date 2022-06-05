@@ -14,13 +14,13 @@ pipeline {
     environment {
         // Git Repo
         GIT_URL = "https://github.com/ginigangadharan/nodejs-todo-demo-app"
-        DATABASE_SERVER = dbnode1
-        POSTGRES_USER = postgres
-        POSTGRES_PASSWORD = 'PassWord'
-        POSTGRES_DATABASE = app2_db
-        POSTGRES_TABLE = data_table
-        POSTGRES_NEW_USER_NAME = devteam
-        POSTGRES_NEW_USER_PASSWORD = 'DevPassword'
+        DATABASE_SERVER = "dbnode1"
+        POSTGRES_USER = "postgres"
+        POSTGRES_PASSWORD = "PassWord"
+        POSTGRES_DATABASE = "app2_db"
+        POSTGRES_TABLE = "data_table"
+        POSTGRES_NEW_USER_NAME = "devteam"
+        POSTGRES_NEW_USER_PASSWORD = "DevPassword"
     //    
     //    // This can be nexus3 or nexus2
     //    NEXUS_VERSION = "nexus3"
