@@ -167,9 +167,10 @@ def callAT(){
      ansibleTower(
             towerServer: 'AAP-Demo',
             templateType: 'job',
-            jobTemplate: 'List to String',
+            //jobTemplate: 'List to String',
+            jobTemplate: 'PostgreSQL - Create Database and User Access',
             importTowerLogs: true,
-            inventory: 'Demo Inventory',
+            inventory: 'Ansible Dev Lab',
             jobTags: '',
             skipJobTags: '',
             limit: '',
