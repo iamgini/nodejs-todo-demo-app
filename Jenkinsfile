@@ -184,8 +184,6 @@ def callAT(){
             removeColor: false,
             verbose: true,
             credential: '',
-            DATABASE_SERVER: dbnode1
-        POSTGRES_USER: postgres
         
             extraVars: '''---
             NODES: "$DATABASE_SERVER"
