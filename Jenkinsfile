@@ -49,7 +49,7 @@ pipeline {
                 script {
                     // Trigger Ansible controller job
                     //deploy('hello','prod');
-                    ansible_controller_job();
+                    ansible_controller_db_job();
                 }
             }
         }
@@ -63,7 +63,7 @@ pipeline {
     }
 }
 
-def ansible_controller_job(){
+def ansible_controller_db_job(){
 
      ansibleTower(
             towerServer: 'AAP-Demo',
@@ -77,7 +77,6 @@ def ansible_controller_job(){
             removeColor: false,
             verbose: true,
             credential: '',
-        
             extraVars: '''---
             NODES: ["$DATABASE_SERVER"]
             postgres_user: "$POSTGRES_USER"
