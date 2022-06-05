@@ -14,6 +14,13 @@ pipeline {
     environment {
         // Git Repo
         GIT_URL = "https://github.com/ginigangadharan/nodejs-todo-demo-app"
+        DATABASE_SERVER: dbnode1
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: 'PassWord'
+        POSTGRES_DATABASE: app2_db
+        POSTGRES_TABLE: data_table
+        POSTGRES_NEW_USER_NAME: devteam
+        POSTGRES_NEW_USER_PASSWORD: 'DevPassword'
     //    
     //    // This can be nexus3 or nexus2
     //    NEXUS_VERSION = "nexus3"
@@ -177,7 +184,17 @@ def callAT(){
             removeColor: false,
             verbose: true,
             credential: '',
+            DATABASE_SERVER: dbnode1
+        POSTGRES_USER: postgres
+        
             extraVars: '''---
+            NODES: "$DATABASE_SERVER"
+            postgres_user: "$POSTGRES_USER"
+            postgres_password: "$POSTGRES_PASSWORD"
+            postgres_database: "$POSTGRES_DATABASE"
+            postgres_table: "$POSTGRES_TABLE"
+            postgres_new_user_name: "$POSTGRES_NEW_USER_NAME"
+            postgres_new_user_password: "$POSTGRES_NEW_USER_PASSWORD"
             maven_repository_url: "http://nexus.domain.com:8081/repository/maven-releases/"
             app_group_id: "com.redhat.app"
             app_artifact_id: "hello"
