@@ -57,7 +57,7 @@ pipeline {
         stage("Deploy") {
             steps {
                 echo "Include tasks for deploying application"
-                }
+                
             }
         }        
     }
