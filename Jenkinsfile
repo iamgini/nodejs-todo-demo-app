@@ -186,7 +186,7 @@ def callAT(){
             credential: '',
         
             extraVars: '''---
-            NODES: "$DATABASE_SERVER"
+            NODES: ["$DATABASE_SERVER"]
             postgres_user: "$POSTGRES_USER"
             postgres_password: "$POSTGRES_PASSWORD"
             postgres_database: "$POSTGRES_DATABASE"
